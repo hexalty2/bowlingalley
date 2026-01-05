@@ -37,6 +37,19 @@ class StatusCheckCreate(BaseModel):
     client_name: str
 
 
+# Pricing constants
+PRICING = {
+    "lane_per_hour": 35.00,
+    "shoe_rental": 5.00,
+    "deposit": 20.00,  # Required deposit to reduce no-shows
+    "party_packages": {
+        "kids": 150.00,  # 2 hours, 1 lane, 8 shoe rentals, decorations
+        "adult": 200.00,  # 2 hours, 2 lanes, 10 shoe rentals
+        "premium": 350.00,  # 3 hours, 3 lanes, 15 shoe rentals, food, decorations
+    }
+}
+
+
 # Reservation Models
 class ReservationCreate(BaseModel):
     name: str
@@ -68,19 +81,6 @@ class Reservation(BaseModel):
     balance_due: float = 0.0  # Total minus deposit
     status: str = "confirmed"
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
-
-# Pricing constants
-PRICING = {
-    "lane_per_hour": 35.00,
-    "shoe_rental": 5.00,
-    "deposit": 20.00,  # Required deposit to reduce no-shows
-    "party_packages": {
-        "kids": 150.00,  # 2 hours, 1 lane, 8 shoe rentals, decorations
-        "adult": 200.00,  # 2 hours, 2 lanes, 10 shoe rentals
-        "premium": 350.00,  # 3 hours, 3 lanes, 15 shoe rentals, food, decorations
-    }
-}
 
 
 def calculate_total_price(reservation: ReservationCreate) -> float:
