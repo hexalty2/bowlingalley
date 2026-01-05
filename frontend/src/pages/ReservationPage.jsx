@@ -42,6 +42,7 @@ const API = `${BACKEND_URL}/api`;
 const PRICING = {
   lane_per_hour: 35.0,
   shoe_rental: 5.0,
+  deposit: 20.0,
   party_packages: {
     kids: 150.0,
     adult: 200.0,
@@ -213,7 +214,17 @@ export default function ReservationPage() {
                 </div>
                 <div className="flex justify-between py-3 border-b border-secondary/10">
                   <span className="text-foreground/70">Total</span>
-                  <span className="font-bold text-primary text-xl">${calculateTotal()}</span>
+                  <span className="font-bold text-secondary text-xl">${calculateTotal()}</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-secondary/10">
+                  <span className="text-foreground/70">Deposit Paid</span>
+                  <span className="font-semibold text-accent">${PRICING.deposit.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between py-3">
+                  <span className="text-foreground/70">Balance Due at Venue</span>
+                  <span className="font-bold text-primary text-xl">
+                    ${(parseFloat(calculateTotal()) - PRICING.deposit).toFixed(2)}
+                  </span>
                 </div>
               </div>
 
@@ -615,17 +626,32 @@ export default function ReservationPage() {
                 </div>
 
                 <div className="bg-primary/10 rounded-2xl p-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-xl font-bold text-secondary">Total</span>
-                    <span
-                      className="text-3xl font-bold text-primary font-['Chivo']"
-                      data-testid="total-price"
-                    >
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-lg font-semibold text-secondary">Total</span>
+                    <span className="text-2xl font-bold text-secondary font-['Chivo']">
                       ${calculateTotal()}
                     </span>
                   </div>
-                  <p className="text-sm text-foreground/60 mt-2">
-                    Payment due at the venue
+                  <div className="flex justify-between items-center mb-3 pb-3 border-b border-primary/20">
+                    <span className="text-foreground/70">Required Deposit</span>
+                    <span
+                      className="text-xl font-bold text-primary font-['Chivo']"
+                      data-testid="deposit-amount"
+                    >
+                      ${PRICING.deposit.toFixed(2)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-foreground/70">Balance at Venue</span>
+                    <span
+                      className="text-xl font-bold text-accent font-['Chivo']"
+                      data-testid="balance-due"
+                    >
+                      ${(parseFloat(calculateTotal()) - PRICING.deposit).toFixed(2)}
+                    </span>
+                  </div>
+                  <p className="text-sm text-foreground/60 mt-4 text-center bg-white/50 rounded-lg p-2">
+                    💳 $20 deposit secures your booking • Refundable up to 24hrs before
                   </p>
                 </div>
               </div>

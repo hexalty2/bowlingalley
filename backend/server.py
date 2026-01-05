@@ -63,7 +63,9 @@ class Reservation(BaseModel):
     shoe_rental: int
     party_package: Optional[str] = None
     notes: Optional[str] = None
+    deposit: float = PRICING["deposit"]
     total_price: float
+    balance_due: float = 0.0  # Total minus deposit
     status: str = "confirmed"
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
@@ -72,6 +74,7 @@ class Reservation(BaseModel):
 PRICING = {
     "lane_per_hour": 35.00,
     "shoe_rental": 5.00,
+    "deposit": 20.00,  # Required deposit to reduce no-shows
     "party_packages": {
         "kids": 150.00,  # 2 hours, 1 lane, 8 shoe rentals, decorations
         "adult": 200.00,  # 2 hours, 2 lanes, 10 shoe rentals
@@ -114,10 +117,14 @@ async def get_pricing():
 @api_router.post("/reservations", response_model=Reservation)
 async def create_reservation(input: ReservationCreate):
     total_price = calculate_total_price(input)
+    deposit = PRICING["deposit"]
+    balance_due = total_price - deposit
     
     reservation_obj = Reservation(
         **input.model_dump(),
-        total_price=total_price
+        total_price=total_price,
+        deposit=deposit,
+        balance_due=balance_due
     )
     
     # Convert to dict for MongoDB
