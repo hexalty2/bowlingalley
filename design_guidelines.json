@@ -1,0 +1,139 @@
+{
+  "brand_identity": {
+    "name": "GoldenLane Bowl",
+    "tone": "Nostalgic, Welcoming, Sturdy, Clear",
+    "archetype": "The Caregiver mixed with The Jester",
+    "mission": "To provide a safe, accessible, and joyful bowling experience for every generation."
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Chivo, sans-serif",
+      "body": "Manrope, sans-serif"
+    },
+    "imports": [
+      "https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap"
+    ],
+    "rules": {
+      "headings": "font-bold tracking-tight text-primary",
+      "body": "text-lg leading-relaxed text-foreground/90",
+      "accessibility": "Minimum font size 16px. Headings must be at least 32px. Use font-medium or font-semibold for body text if contrast is borderline."
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#E63946",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#1D3557",
+      "secondary_foreground": "#FFFFFF",
+      "accent": "#457B9D",
+      "accent_foreground": "#FFFFFF",
+      "background": "#F1FAEE",
+      "foreground": "#1D3557",
+      "muted": "#A8DADC",
+      "muted_foreground": "#1D3557",
+      "card": "#FFFFFF",
+      "card_foreground": "#1D3557",
+      "border": "#1D3557"
+    },
+    "tailwind_config": {
+      "theme": {
+        "extend": {
+          "colors": {
+            "primary": "hsl(356, 75%, 56%)",
+            "secondary": "hsl(215, 50%, 23%)",
+            "accent": "hsl(203, 39%, 44%)",
+            "background": "hsl(105, 55%, 96%)",
+            "foreground": "hsl(215, 50%, 23%)"
+          }
+        }
+      }
+    },
+    "usage": {
+      "primary": "Main Call-to-Actions (Book Now), Price Tags, Important Alerts",
+      "secondary": "Headings, Footers, Borders",
+      "background": "Page Background (Avoid pure white to reduce eye strain)",
+      "accent": "Icons, Secondary Buttons, Illustrations"
+    }
+  },
+  "layout": {
+    "spacing": {
+      "container_padding": "p-6 md:p-12 lg:p-20",
+      "section_gap": "gap-16 md:gap-24",
+      "element_gap": "gap-6 md:gap-8"
+    },
+    "grid_strategy": "Bento Grid for Gallery and Services. Simple 1-col or 2-col for information. Avoid complex masonry.",
+    "container_width": "max-w-7xl mx-auto"
+  },
+  "components": {
+    "buttons": {
+      "style": "rounded-full px-8 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all active:scale-95",
+      "variants": {
+        "default": "bg-primary text-white hover:bg-primary/90",
+        "outline": "border-2 border-secondary text-secondary hover:bg-secondary hover:text-white"
+      }
+    },
+    "cards": {
+      "style": "bg-white rounded-2xl border-2 border-secondary/10 shadow-sm hover:shadow-md transition-all p-8",
+      "content_alignment": "text-left"
+    },
+    "inputs": {
+      "style": "h-14 text-lg px-4 rounded-xl border-2 border-secondary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+    },
+    "navigation": {
+      "style": "Sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-secondary/10",
+      "links": "text-lg font-bold text-secondary hover:text-primary transition-colors"
+    }
+  },
+  "images": {
+    "hero": {
+      "url": "https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg",
+      "alt": "Bright modern bowling alley lanes",
+      "description": "Main hero background or side image"
+    },
+    "seniors_family": {
+      "url": "https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg",
+      "alt": "Happy seniors and family bowling together",
+      "description": "For 'Community' or 'About Us' section"
+    },
+    "kids_party": {
+      "url": "https://images.unsplash.com/photo-1570472456794-8578e4bf1fab",
+      "alt": "Group of people having fun bowling",
+      "description": "For 'Parties & Events' section"
+    },
+    "equipment": {
+      "url": "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
+      "alt": "Bowling shoes and balls",
+      "description": "For 'Services' or 'Pricing' section"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1671427478429-3cfa4f905769",
+      "https://images.pexels.com/photos/5781274/pexels-photo-5781274.jpeg",
+      "https://images.unsplash.com/photo-1680479610966-622607249a73"
+    ]
+  },
+  "accessibility_rules": {
+    "contrast": "Ensure 4.5:1 contrast ratio for all text. Use dark navy on off-white.",
+    "focus_states": "Visible focus rings (yellow or orange) are mandatory for navigation.",
+    "touch_targets": "All interactive elements must be at least 44x44px.",
+    "text_sizing": "Allow users to zoom without breaking layout. Use relative units (rem) where possible."
+  },
+  "instructions_to_main_agent": [
+    "Use the 'GoldenLane Bowl' brand name.",
+    "Implement the 'Modern Retro' aesthetic: Bold colors, clean lines, nostalgic feel but modern tech.",
+    "The Reservation Page must be a simple step-by-step wizard, not a complex dashboard.",
+    "Use 'lucide-react' for icons. Pick icons that are thick and easy to read.",
+    "Do not use gradients for text. Keep it solid for readability.",
+    "Ensure the 'Book Now' button is always visible (sticky) on mobile.",
+    "Use the provided image URLs for specific sections. Do not use placeholders.",
+    "For the 'Hours' section, use a clear table or list format, not a complex graphic.",
+    "Add 'data-testid' to all inputs and buttons."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop' - no generic centered layouts.",
+    "Use 2-3x more spacing than typical.",
+    "Every interaction needs micro-animations.",
+    "Use 'sonner' for toasts.",
+    "Components must use named exports.",
+    "Pages must use default exports."
+  ]
+}
