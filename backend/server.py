@@ -1,15 +1,14 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
-
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -28,7 +27,7 @@ api_router = APIRouter(prefix="/api")
 
 # Define Models
 class StatusCheck(BaseModel):
-    model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
+    model_config = ConfigDict(extra="ignore")
     
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
@@ -37,34 +36,155 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
-# Add your routes to the router instead of directly to app
+
+# Reservation Models
+class ReservationCreate(BaseModel):
+    name: str
+    email: EmailStr
+    phone: str
+    date: str  # ISO date string YYYY-MM-DD
+    time: str  # Time slot like "10:00 AM"
+    num_lanes: int = Field(ge=1, le=10)
+    shoe_rental: int = Field(ge=0, default=0)  # Number of shoe rentals
+    party_package: Optional[str] = None  # "kids", "adult", "premium", or None
+    notes: Optional[str] = None
+
+
+class Reservation(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    email: str
+    phone: str
+    date: str
+    time: str
+    num_lanes: int
+    shoe_rental: int
+    party_package: Optional[str] = None
+    notes: Optional[str] = None
+    total_price: float
+    status: str = "confirmed"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+# Pricing constants
+PRICING = {
+    "lane_per_hour": 35.00,
+    "shoe_rental": 5.00,
+    "party_packages": {
+        "kids": 150.00,  # 2 hours, 1 lane, 8 shoe rentals, decorations
+        "adult": 200.00,  # 2 hours, 2 lanes, 10 shoe rentals
+        "premium": 350.00,  # 3 hours, 3 lanes, 15 shoe rentals, food, decorations
+    }
+}
+
+
+def calculate_total_price(reservation: ReservationCreate) -> float:
+    total = 0.0
+    
+    # Base lane rental (1 hour per booking)
+    total += reservation.num_lanes * PRICING["lane_per_hour"]
+    
+    # Shoe rentals
+    total += reservation.shoe_rental * PRICING["shoe_rental"]
+    
+    # Party package (replaces base calculations if selected)
+    if reservation.party_package and reservation.party_package in PRICING["party_packages"]:
+        total = PRICING["party_packages"][reservation.party_package]
+        # Add extra shoes if more than included
+        included_shoes = {"kids": 8, "adult": 10, "premium": 15}.get(reservation.party_package, 0)
+        if reservation.shoe_rental > included_shoes:
+            total += (reservation.shoe_rental - included_shoes) * PRICING["shoe_rental"]
+    
+    return round(total, 2)
+
+
+# Routes
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "GoldenLane Bowl API"}
+
+
+@api_router.get("/pricing")
+async def get_pricing():
+    return PRICING
+
+
+@api_router.post("/reservations", response_model=Reservation)
+async def create_reservation(input: ReservationCreate):
+    total_price = calculate_total_price(input)
+    
+    reservation_obj = Reservation(
+        **input.model_dump(),
+        total_price=total_price
+    )
+    
+    # Convert to dict for MongoDB
+    doc = reservation_obj.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    
+    await db.reservations.insert_one(doc)
+    
+    return reservation_obj
+
+
+@api_router.get("/reservations", response_model=List[Reservation])
+async def get_reservations():
+    reservations = await db.reservations.find({}, {"_id": 0}).to_list(1000)
+    
+    for res in reservations:
+        if isinstance(res.get('created_at'), str):
+            res['created_at'] = datetime.fromisoformat(res['created_at'])
+    
+    return reservations
+
+
+@api_router.get("/reservations/{reservation_id}", response_model=Reservation)
+async def get_reservation(reservation_id: str):
+    reservation = await db.reservations.find_one({"id": reservation_id}, {"_id": 0})
+    
+    if not reservation:
+        raise HTTPException(status_code=404, detail="Reservation not found")
+    
+    if isinstance(reservation.get('created_at'), str):
+        reservation['created_at'] = datetime.fromisoformat(reservation['created_at'])
+    
+    return reservation
+
+
+@api_router.delete("/reservations/{reservation_id}")
+async def cancel_reservation(reservation_id: str):
+    result = await db.reservations.delete_one({"id": reservation_id})
+    
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Reservation not found")
+    
+    return {"message": "Reservation cancelled successfully"}
+
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.model_dump()
     status_obj = StatusCheck(**status_dict)
     
-    # Convert to dict and serialize datetime to ISO string for MongoDB
     doc = status_obj.model_dump()
     doc['timestamp'] = doc['timestamp'].isoformat()
     
-    _ = await db.status_checks.insert_one(doc)
+    await db.status_checks.insert_one(doc)
     return status_obj
+
 
 @api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
-    # Exclude MongoDB's _id field from the query results
     status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
     
-    # Convert ISO string timestamps back to datetime objects
     for check in status_checks:
         if isinstance(check['timestamp'], str):
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
 
 # Include the router in the main app
 app.include_router(api_router)
