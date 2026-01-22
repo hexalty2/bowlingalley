@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -11,112 +9,112 @@ import {
   MapPin,
   Phone,
   Mail,
-  ChevronRight,
   Star,
   Footprints,
-  Utensils,
-  Music,
+  Timer,
+  Banknote,
+  Gift,
+  Cookie,
+  Coffee,
+  CircleDot,
+  Home,
 } from "lucide-react";
 
 export default function LandingPage() {
   const services = [
     {
-      icon: Target,
-      title: "Open Bowling",
-      description: "Drop in anytime for casual fun. Perfect for families and friends.",
+      icon: CircleDot,
+      title: "Petites Boules",
+      description: "Bowling avec petites boules pour tous les âges. Parfait pour les familles!",
       image: "https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg",
     },
     {
       icon: Users,
-      title: "League Play",
-      description: "Join our weekly leagues for all skill levels. Meet new friends!",
+      title: "Jusqu'à 6 Joueurs",
+      description: "Maximum 6 joueurs par allée pour une expérience conviviale.",
       image: "https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg",
     },
     {
-      icon: PartyPopper,
-      title: "Private Events",
-      description: "Birthday parties, corporate events, and celebrations.",
+      icon: Home,
+      title: "Salle Privée",
+      description: "Salle disponible à louer pour vos événements spéciaux.",
       image: "https://images.unsplash.com/photo-1570472456794-8578e4bf1fab",
     },
     {
       icon: Footprints,
-      title: "Shoe Rental",
-      description: "Quality bowling shoes in all sizes, sanitized after each use.",
+      title: "Location de Souliers",
+      description: "Souliers de bowling disponibles en toutes tailles, désinfectés après chaque usage.",
       image: "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
     },
   ];
 
   const pricing = [
     {
-      title: "Per Game",
-      price: "$6",
-      unit: "per person",
-      features: ["Unlimited time per game", "All skill levels welcome", "Bumpers available"],
+      title: "Une Partie",
+      price: "6$",
+      unit: "par personne",
+      duration: "15 minutes",
+      features: ["Durée: 15 minutes", "Petites boules", "Tous niveaux bienvenus"],
+      icon: Target,
     },
     {
-      title: "Lane Rental",
-      price: "$35",
-      unit: "per hour",
-      features: ["Up to 6 players", "Shoes not included", "Score tracking included"],
+      title: "Location Allée",
+      price: "38$",
+      unit: "par heure",
+      features: ["Maximum 6 joueurs", "Souliers non inclus", "Tableau de pointage inclus"],
+      icon: Timer,
       highlight: true,
     },
     {
-      title: "Shoe Rental",
-      price: "$5",
-      unit: "per pair",
-      features: ["All sizes available", "Sanitized & comfortable", "Required for play"],
+      title: "Location Souliers",
+      price: "3$",
+      unit: "par paire",
+      features: ["Toutes tailles disponibles", "Désinfectés & confortables", "Requis pour jouer"],
+      icon: Footprints,
     },
   ];
 
-  const partyPackages = [
-    {
-      title: "Kids Party",
-      price: "$150",
-      features: ["2 hours of bowling", "1 lane reserved", "8 shoe rentals", "Party decorations"],
-    },
-    {
-      title: "Adult Party",
-      price: "$200",
-      features: ["2 hours of bowling", "2 lanes reserved", "10 shoe rentals", "Music selection"],
-    },
-    {
-      title: "Premium Event",
-      price: "$350",
-      features: ["3 hours of bowling", "3 lanes reserved", "15 shoe rentals", "Food & decorations"],
-      highlight: true,
-    },
-  ];
+  const partyPackage = {
+    title: "Forfait Fête",
+    price: "5$",
+    unit: "par personne",
+    features: [
+      { icon: CircleDot, text: "1 jeton de jeu" },
+      { icon: Cookie, text: "1 friandise" },
+      { icon: Coffee, text: "1 breuvage" },
+    ],
+  };
 
   const hours = [
-    { day: "Monday - Thursday", time: "10:00 AM - 10:00 PM" },
-    { day: "Friday - Saturday", time: "10:00 AM - 12:00 AM" },
-    { day: "Sunday", time: "11:00 AM - 9:00 PM" },
+    { day: "Lundi - Jeudi", time: "10h00 - 22h00" },
+    { day: "Vendredi - Samedi", time: "10h00 - 00h00" },
+    { day: "Dimanche", time: "11h00 - 21h00" },
   ];
 
   const galleryImages = [
     {
       src: "https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg",
-      alt: "Modern bowling lanes",
+      alt: "Allées de bowling modernes",
     },
     {
       src: "https://images.unsplash.com/photo-1671427478429-3cfa4f905769",
-      alt: "Bowling action shot",
+      alt: "Action de bowling",
     },
     {
       src: "https://images.pexels.com/photos/5781274/pexels-photo-5781274.jpeg",
-      alt: "Family bowling together",
+      alt: "Famille qui joue au bowling",
     },
     {
       src: "https://images.unsplash.com/photo-1680479610966-622607249a73",
-      alt: "Bowling ball close-up",
+      alt: "Boule de bowling gros plan",
     },
     {
       src: "https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg",
-      alt: "Friends celebrating",
+      alt: "Amis qui célèbrent",
     },
     {
       src: "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
-      alt: "Bowling shoes and equipment",
+      alt: "Souliers et équipement",
     },
   ];
 
@@ -139,38 +137,41 @@ export default function LandingPage() {
           <div className="max-w-2xl animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Star className="w-5 h-5 text-primary" />
-              <span className="text-white font-medium">Family-Friendly Since 1985</span>
+              <span className="text-white font-medium">Plaisir familial depuis 1985</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white font-['Chivo'] leading-tight mb-6">
-              Strike Up
+              Petites Boules,
               <br />
-              <span className="text-primary">Good Times</span>
+              <span className="text-primary">Grandes Joies</span>
             </h1>
 
-            <p className="text-xl text-white/90 leading-relaxed mb-10 max-w-lg">
-              Where every generation comes to play. Modern lanes, classic fun, and memories that last a lifetime.
+            <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-lg">
+              Le bowling accessible à tous avec nos petites boules. Parfait pour les familles et les amis de tous âges.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/reserve">
-                <Button
-                  className="rounded-full px-10 py-7 text-xl font-bold shadow-lg hover:shadow-xl transition-all active:scale-95 bg-primary text-white hover:bg-primary/90 w-full sm:w-auto"
-                  data-testid="hero-book-btn"
-                >
-                  Book Your Lane
-                  <ChevronRight className="w-6 h-6 ml-2" />
-                </Button>
-              </Link>
-              <a href="#pricing">
-                <Button
-                  variant="outline"
-                  className="rounded-full px-10 py-7 text-xl font-bold border-2 border-white text-white hover:bg-white hover:text-secondary transition-all w-full sm:w-auto"
-                  data-testid="hero-pricing-btn"
-                >
-                  View Pricing
-                </Button>
-              </a>
+            {/* Cash Only Banner */}
+            <div className="inline-flex items-center gap-3 bg-primary text-white px-6 py-4 rounded-2xl shadow-xl mb-8">
+              <Banknote className="w-8 h-8" />
+              <div>
+                <p className="text-xl font-bold font-['Chivo']">COMPTANT SEULEMENT</p>
+                <p className="text-white/80 text-sm">Pas de réservation nécessaire</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-6 text-white/90">
+              <div className="flex items-center gap-2">
+                <Target className="w-5 h-5 text-primary" />
+                <span>6$ / partie</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Timer className="w-5 h-5 text-primary" />
+                <span>38$ / heure</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-primary" />
+                <span>Max 6 joueurs</span>
+              </div>
             </div>
           </div>
         </div>
@@ -181,10 +182,10 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-secondary font-['Chivo'] mb-4">
-              Our Services
+              Nos Services
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Everything you need for a perfect bowling experience
+              Tout ce qu'il vous faut pour une expérience de bowling parfaite
             </p>
           </div>
 
@@ -224,22 +225,26 @@ export default function LandingPage() {
 
       {/* Pricing Section */}
       <section
-        id="pricing"
+        id="tarifs"
         className="py-20 lg:py-32 px-6 bg-secondary/5"
         data-testid="pricing-section"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-secondary font-['Chivo'] mb-4">
-              Simple Pricing
+              Nos Tarifs
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              No hidden fees. Just great bowling at fair prices.
+              Prix simples et transparents. Pas de frais cachés.
             </p>
+            <div className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold mt-6">
+              <Banknote className="w-5 h-5" />
+              COMPTANT SEULEMENT
+            </div>
           </div>
 
           {/* Standard Pricing */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {pricing.map((plan, index) => (
               <Card
                 key={index}
@@ -248,15 +253,26 @@ export default function LandingPage() {
                 } shadow-sm p-8`}
                 data-testid={`pricing-card-${index}`}
               >
-                <h3 className="text-xl font-bold text-secondary font-['Chivo'] mb-2">
-                  {plan.title}
-                </h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <plan.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary font-['Chivo']">
+                    {plan.title}
+                  </h3>
+                </div>
                 <div className="mb-6">
                   <span className="text-5xl font-bold text-primary font-['Chivo']">
                     {plan.price}
                   </span>
                   <span className="text-foreground/60 ml-2">{plan.unit}</span>
                 </div>
+                {plan.duration && (
+                  <p className="text-sm text-accent font-semibold mb-4 flex items-center gap-2">
+                    <Timer className="w-4 h-4" />
+                    Durée: {plan.duration}
+                  </p>
+                )}
                 <ul className="space-y-3">
                   {plan.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-center gap-3 text-foreground/80">
@@ -269,66 +285,57 @@ export default function LandingPage() {
             ))}
           </div>
 
-          {/* Party Packages */}
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-secondary font-['Chivo'] mb-4">
-              Party Packages
-            </h3>
-            <p className="text-lg text-foreground/70">
-              All-inclusive packages for your special celebration
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {partyPackages.map((pkg, index) => (
-              <Card
-                key={index}
-                className={`bg-white rounded-2xl border-2 ${
-                  pkg.highlight ? "border-primary pricing-highlight" : "border-secondary/10"
-                } shadow-sm p-8`}
-                data-testid={`party-card-${index}`}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <PartyPopper className="w-6 h-6 text-primary" />
-                  <h4 className="text-xl font-bold text-secondary font-['Chivo']">
-                    {pkg.title}
-                  </h4>
+          {/* Party Package */}
+          <div className="max-w-2xl mx-auto">
+            <Card className="bg-white rounded-3xl border-2 border-primary shadow-xl overflow-hidden">
+              <div className="bg-primary p-6 text-center">
+                <div className="flex items-center justify-center gap-3 mb-2">
+                  <PartyPopper className="w-8 h-8 text-white" />
+                  <h3 className="text-2xl font-bold text-white font-['Chivo']">
+                    {partyPackage.title}
+                  </h3>
+                  <PartyPopper className="w-8 h-8 text-white" />
                 </div>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-primary font-['Chivo']">
-                    {pkg.price}
+                <p className="text-white/80">Idéal pour les fêtes d'anniversaire!</p>
+              </div>
+              <CardContent className="p-8">
+                <div className="text-center mb-8">
+                  <span className="text-6xl font-bold text-primary font-['Chivo']">
+                    {partyPackage.price}
                   </span>
+                  <span className="text-foreground/60 ml-2 text-xl">{partyPackage.unit}</span>
                 </div>
-                <ul className="space-y-3">
-                  {pkg.features.map((feature, fIndex) => (
-                    <li key={fIndex} className="flex items-center gap-3 text-foreground/80">
-                      <div className="w-2 h-2 bg-accent rounded-full" />
-                      {feature}
-                    </li>
+
+                <div className="grid grid-cols-3 gap-4">
+                  {partyPackage.features.map((item, index) => (
+                    <div
+                      key={index}
+                      className="text-center p-4 bg-secondary/5 rounded-2xl"
+                    >
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <item.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <p className="font-semibold text-secondary">{item.text}</p>
+                    </div>
                   ))}
-                </ul>
-                <Link to="/reserve" className="block mt-6">
-                  <Button
-                    variant={pkg.highlight ? "default" : "outline"}
-                    className="w-full rounded-full py-6 font-bold"
-                    data-testid={`party-book-btn-${index}`}
-                  >
-                    Book This Package
-                  </Button>
-                </Link>
-              </Card>
-            ))}
+                </div>
+
+                <p className="text-center text-foreground/60 mt-6 text-sm">
+                  * En plus du tarif de bowling régulier
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Hours Section */}
-      <section id="hours" className="py-20 lg:py-32 px-6" data-testid="hours-section">
+      <section id="horaires" className="py-20 lg:py-32 px-6" data-testid="hours-section">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-secondary font-['Chivo'] mb-8">
-                Hours & Location
+                Horaires & Emplacement
               </h2>
 
               <div className="space-y-6 mb-10">
@@ -347,36 +354,45 @@ export default function LandingPage() {
                 ))}
               </div>
 
-              <Card className="bg-white rounded-2xl border-2 border-secondary/10 p-8">
+              <Card className="bg-white rounded-2xl border-2 border-secondary/10 p-8 mb-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-8 h-8 text-primary flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-secondary font-['Chivo'] mb-2">
-                      Find Us
+                      Nous Trouver
                     </h3>
                     <p className="text-lg text-foreground/80 leading-relaxed">
-                      123 Strike Lane<br />
-                      Bowling City, BC 12345
+                      123 Rue des Quilles<br />
+                      Ville, QC H1H 1H1
                     </p>
                     <p className="text-foreground/60 mt-2">
-                      Free parking available
+                      Stationnement gratuit disponible
                     </p>
                   </div>
                 </div>
               </Card>
+
+              {/* Cash Only Reminder */}
+              <div className="flex items-center gap-4 p-4 bg-primary/10 rounded-xl border-2 border-primary/30">
+                <Banknote className="w-8 h-8 text-primary flex-shrink-0" />
+                <div>
+                  <p className="font-bold text-secondary">Comptant Seulement</p>
+                  <p className="text-foreground/70 text-sm">Pas de carte de crédit ou débit acceptée</p>
+                </div>
+              </div>
             </div>
 
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg"
-                  alt="Happy customers bowling"
+                  alt="Clients heureux au bowling"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-xl">
-                <p className="text-lg font-bold font-['Chivo']">Open 7 Days</p>
-                <p className="text-white/80">Rain or shine!</p>
+                <p className="text-lg font-bold font-['Chivo']">Ouvert 7 jours</p>
+                <p className="text-white/80">Beau temps, mauvais temps!</p>
               </div>
             </div>
           </div>
@@ -385,17 +401,17 @@ export default function LandingPage() {
 
       {/* Gallery Section */}
       <section
-        id="gallery"
+        id="galerie"
         className="py-20 lg:py-32 px-6 bg-secondary/5"
         data-testid="gallery-section"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-secondary font-['Chivo'] mb-4">
-              Gallery
+              Galerie
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Take a look inside GoldenLane Bowl
+              Découvrez l'ambiance de GoldenLane Bowl
             </p>
           </div>
 
@@ -426,10 +442,10 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-secondary font-['Chivo'] mb-6">
-                Get In Touch
+                Nous Contacter
               </h2>
               <p className="text-lg text-foreground/70 mb-10 max-w-lg">
-                Have questions? Want to book a large event? We'd love to hear from you.
+                Des questions? Appelez-nous ou passez nous voir. Premier arrivé, premier servi!
               </p>
 
               <div className="space-y-6">
@@ -442,13 +458,13 @@ export default function LandingPage() {
                     <Phone className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-foreground/60">Call Us</p>
+                    <p className="text-sm text-foreground/60">Appelez-nous</p>
                     <p className="text-xl font-bold text-secondary">(555) 123-4567</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:hello@goldenlanebowl.com"
+                  href="mailto:bonjour@goldenlanebowl.com"
                   className="flex items-center gap-4 p-4 bg-white rounded-xl border-2 border-secondary/10 hover:border-primary transition-colors group"
                   data-testid="contact-email"
                 >
@@ -456,8 +472,8 @@ export default function LandingPage() {
                     <Mail className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-foreground/60">Email Us</p>
-                    <p className="text-xl font-bold text-secondary">hello@goldenlanebowl.com</p>
+                    <p className="text-sm text-foreground/60">Écrivez-nous</p>
+                    <p className="text-xl font-bold text-secondary">bonjour@goldenlanebowl.com</p>
                   </div>
                 </a>
 
@@ -466,8 +482,8 @@ export default function LandingPage() {
                     <MapPin className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-foreground/60">Visit Us</p>
-                    <p className="text-xl font-bold text-secondary">123 Strike Lane, Bowling City</p>
+                    <p className="text-sm text-foreground/60">Visitez-nous</p>
+                    <p className="text-xl font-bold text-secondary">123 Rue des Quilles, Ville</p>
                   </div>
                 </div>
               </div>
@@ -476,23 +492,34 @@ export default function LandingPage() {
             <div className="flex items-center justify-center">
               <Card className="bg-white rounded-3xl border-2 border-secondary/10 p-10 text-center max-w-md shadow-xl">
                 <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <PartyPopper className="w-10 h-10 text-white" />
+                  <Banknote className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-secondary font-['Chivo'] mb-4">
-                  Ready to Bowl?
+                  Comptant Seulement
                 </h3>
-                <p className="text-foreground/70 mb-8">
-                  Book your lane online in just a few clicks. No waiting, no hassle.
+                <p className="text-foreground/70 mb-6">
+                  Pas de réservation nécessaire! Présentez-vous et jouez. Premier arrivé, premier servi.
                 </p>
-                <Link to="/reserve">
-                  <Button
-                    className="rounded-full px-10 py-7 text-xl font-bold shadow-lg hover:shadow-xl transition-all active:scale-95 bg-primary text-white hover:bg-primary/90 w-full"
-                    data-testid="contact-book-btn"
-                  >
-                    Book Now
-                    <ChevronRight className="w-6 h-6 ml-2" />
-                  </Button>
-                </Link>
+                <div className="bg-secondary/5 rounded-2xl p-6">
+                  <div className="grid grid-cols-2 gap-4 text-left">
+                    <div>
+                      <p className="text-foreground/60 text-sm">Une partie</p>
+                      <p className="text-xl font-bold text-primary">6$</p>
+                    </div>
+                    <div>
+                      <p className="text-foreground/60 text-sm">Location allée</p>
+                      <p className="text-xl font-bold text-primary">38$/h</p>
+                    </div>
+                    <div>
+                      <p className="text-foreground/60 text-sm">Souliers</p>
+                      <p className="text-xl font-bold text-primary">3$</p>
+                    </div>
+                    <div>
+                      <p className="text-foreground/60 text-sm">Forfait fête</p>
+                      <p className="text-xl font-bold text-primary">5$/pers</p>
+                    </div>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>

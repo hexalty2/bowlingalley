@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Banknote } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,17 +18,21 @@ export const Footer = () => {
                 <h2 className="text-xl font-bold font-['Chivo'] tracking-tight">
                   GoldenLane
                 </h2>
-                <p className="text-xs text-white/70 -mt-1">Bowl</p>
+                <p className="text-xs text-white/70 -mt-1">Petites Boules</p>
               </div>
             </Link>
             <p className="text-white/80 text-base leading-relaxed">
-              Where every generation comes to play. Family-friendly bowling since 1985.
+              Le plaisir du bowling pour toute la famille. Petites boules, grandes joies depuis 1985.
             </p>
+            <div className="flex items-center gap-2 mt-4 bg-primary/20 text-primary px-4 py-2 rounded-full font-bold w-fit">
+              <Banknote className="w-5 h-5" />
+              Comptant seulement
+            </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold font-['Chivo'] mb-6">Contact Us</h3>
+            <h3 className="text-lg font-bold font-['Chivo'] mb-6">Nous Contacter</h3>
             <ul className="space-y-4">
               <li>
                 <a
@@ -42,18 +46,18 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:hello@goldenlanebowl.com"
+                  href="mailto:bonjour@goldenlanebowl.com"
                   className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors"
                   data-testid="footer-email"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>hello@goldenlanebowl.com</span>
+                  <span>bonjour@goldenlanebowl.com</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-white/80">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <span>123 Strike Lane<br />Bowling City, BC 12345</span>
+                  <span>123 Rue des Quilles<br />Ville, QC H1H 1H1</span>
                 </div>
               </li>
             </ul>
@@ -61,27 +65,27 @@ export const Footer = () => {
 
           {/* Hours */}
           <div>
-            <h3 className="text-lg font-bold font-['Chivo'] mb-6">Hours</h3>
+            <h3 className="text-lg font-bold font-['Chivo'] mb-6">Horaires</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-white/80">
                 <Clock className="w-5 h-5 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold">Mon - Thu</p>
-                  <p>10:00 AM - 10:00 PM</p>
+                  <p className="font-semibold">Lun - Jeu</p>
+                  <p>10h00 - 22h00</p>
                 </div>
               </li>
               <li className="flex items-center gap-3 text-white/80">
                 <Clock className="w-5 h-5 flex-shrink-0 opacity-0" />
                 <div>
-                  <p className="font-semibold">Fri - Sat</p>
-                  <p>10:00 AM - 12:00 AM</p>
+                  <p className="font-semibold">Ven - Sam</p>
+                  <p>10h00 - 00h00</p>
                 </div>
               </li>
               <li className="flex items-center gap-3 text-white/80">
                 <Clock className="w-5 h-5 flex-shrink-0 opacity-0" />
                 <div>
-                  <p className="font-semibold">Sunday</p>
-                  <p>11:00 AM - 9:00 PM</p>
+                  <p className="font-semibold">Dimanche</p>
+                  <p>11h00 - 21h00</p>
                 </div>
               </li>
             </ul>
@@ -89,7 +93,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold font-['Chivo'] mb-6">Quick Links</h3>
+            <h3 className="text-lg font-bold font-['Chivo'] mb-6">Liens Rapides</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -101,20 +105,19 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#pricing"
+                  href="#tarifs"
                   className="text-white/80 hover:text-primary transition-colors"
                 >
-                  Pricing
+                  Tarifs
                 </a>
               </li>
               <li>
-                <Link
-                  to="/reserve"
+                <a
+                  href="#galerie"
                   className="text-white/80 hover:text-primary transition-colors"
-                  data-testid="footer-reserve-link"
                 >
-                  Book a Lane
-                </Link>
+                  Galerie
+                </a>
               </li>
               <li>
                 <a
@@ -155,10 +158,10 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm">
-            © {currentYear} GoldenLane Bowl. All rights reserved.
+            © {currentYear} GoldenLane Bowl. Tous droits réservés.
           </p>
           <p className="text-white/60 text-sm">
-            Family-friendly bowling since 1985
+            Plaisir familial depuis 1985
           </p>
         </div>
       </div>

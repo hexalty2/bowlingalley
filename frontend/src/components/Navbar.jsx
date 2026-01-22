@@ -1,27 +1,20 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Menu, X, MapPin, Phone } from "lucide-react";
+import { Menu, X, MapPin, Phone, Banknote } from "lucide-react";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const isLanding = location.pathname === "/";
 
   const navLinks = [
     { href: "#services", label: "Services" },
-    { href: "#pricing", label: "Pricing" },
-    { href: "#hours", label: "Hours" },
-    { href: "#gallery", label: "Gallery" },
+    { href: "#tarifs", label: "Tarifs" },
+    { href: "#horaires", label: "Horaires" },
+    { href: "#galerie", label: "Galerie" },
     { href: "#contact", label: "Contact" },
   ];
 
   const scrollToSection = (e, href) => {
     e.preventDefault();
-    if (!isLanding) {
-      window.location.href = "/" + href;
-      return;
-    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -48,10 +41,13 @@ export const Navbar = () => {
             </a>
             <span className="hidden md:flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              123 Strike Lane, Bowling City
+              123 Rue des Quilles, Ville
             </span>
           </div>
-          <span className="text-muted/80">Open Daily 10AM - 11PM</span>
+          <div className="flex items-center gap-2 text-primary font-bold">
+            <Banknote className="w-4 h-4" />
+            <span>COMPTANT SEULEMENT</span>
+          </div>
         </div>
       </div>
 
@@ -71,7 +67,7 @@ export const Navbar = () => {
               <h1 className="text-xl font-bold text-secondary font-['Chivo'] tracking-tight">
                 GoldenLane
               </h1>
-              <p className="text-xs text-secondary/70 -mt-1">Bowl</p>
+              <p className="text-xs text-secondary/70 -mt-1">Petites Boules</p>
             </div>
           </Link>
 
@@ -90,27 +86,21 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="flex items-center gap-4">
-            <Link to="/reserve">
-              <Button
-                className="rounded-full px-8 py-6 text-lg font-bold shadow-lg hover:shadow-xl transition-all active:scale-95 bg-primary text-white hover:bg-primary/90"
-                data-testid="book-now-btn"
-              >
-                Book Now
-              </Button>
-            </Link>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 text-secondary hover:text-primary transition-colors"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-              data-testid="mobile-menu-btn"
-            >
-              {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-            </button>
+          {/* Cash Only Badge */}
+          <div className="hidden lg:flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-bold">
+            <Banknote className="w-5 h-5" />
+            Comptant seulement
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-secondary hover:text-primary transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+            data-testid="mobile-menu-btn"
+          >
+            {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -128,6 +118,10 @@ export const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <div className="flex items-center gap-2 text-primary font-bold py-2">
+                <Banknote className="w-5 h-5" />
+                Comptant seulement
+              </div>
             </div>
           </div>
         )}
