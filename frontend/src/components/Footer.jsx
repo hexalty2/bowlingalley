@@ -57,7 +57,7 @@ export const Footer = () => {
               <li>
                 <div className="flex items-start gap-3 text-white/80">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <span>123 Rue des Quilles<br />Ville, QC H1H 1H1</span>
+                  <span>133 Boulevard Maple<br />Châteauguay, QC</span>
                 </div>
               </li>
             </ul>
@@ -66,27 +66,34 @@ export const Footer = () => {
           {/* Hours */}
           <div>
             <h3 className="text-lg font-bold font-['Chivo'] mb-6">Horaires</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-white/80">
-                <Clock className="w-5 h-5 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold">Lun - Jeu</p>
-                  <p>10h00 - 22h00</p>
-                </div>
+            <ul className="space-y-2 text-sm">
+              <li className="flex justify-between text-white/80">
+                <span>Lundi</span>
+                <span>9h - 11h</span>
               </li>
-              <li className="flex items-center gap-3 text-white/80">
-                <Clock className="w-5 h-5 flex-shrink-0 opacity-0" />
-                <div>
-                  <p className="font-semibold">Ven - Sam</p>
-                  <p>10h00 - 00h00</p>
-                </div>
+              <li className="flex justify-between text-white/50">
+                <span>Mardi</span>
+                <span>Fermé</span>
               </li>
-              <li className="flex items-center gap-3 text-white/80">
-                <Clock className="w-5 h-5 flex-shrink-0 opacity-0" />
-                <div>
-                  <p className="font-semibold">Dimanche</p>
-                  <p>11h00 - 21h00</p>
-                </div>
+              <li className="flex justify-between text-white/50">
+                <span>Mercredi</span>
+                <span>Fermé</span>
+              </li>
+              <li className="flex justify-between text-white/80">
+                <span>Jeudi</span>
+                <span>9h - 11h</span>
+              </li>
+              <li className="flex justify-between text-white/80">
+                <span>Vendredi</span>
+                <span>9h-11h & 22h-Minuit</span>
+              </li>
+              <li className="flex justify-between text-white/80">
+                <span>Samedi</span>
+                <span>9h - Minuit</span>
+              </li>
+              <li className="flex justify-between text-white/80">
+                <span>Dimanche</span>
+                <span>9h - 17h</span>
               </li>
             </ul>
           </div>

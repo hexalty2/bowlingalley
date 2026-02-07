@@ -80,15 +80,19 @@ export default function LandingPage() {
     unit: "par personne",
     features: [
       { icon: CircleDot, text: "1 jeton de jeu" },
-      { icon: Cookie, text: "1 friandise" },
+      { icon: Cookie, text: "1 bonbon" },
       { icon: Coffee, text: "1 breuvage" },
     ],
   };
 
   const hours = [
-    { day: "Lundi - Jeudi", time: "10h00 - 22h00" },
-    { day: "Vendredi - Samedi", time: "10h00 - 00h00" },
-    { day: "Dimanche", time: "11h00 - 21h00" },
+    { day: "Lundi", time: "9h00 - 11h00" },
+    { day: "Mardi", time: "Fermé", closed: true },
+    { day: "Mercredi", time: "Fermé", closed: true },
+    { day: "Jeudi", time: "9h00 - 11h00" },
+    { day: "Vendredi", time: "9h00 - 11h00 & 22h00 - Minuit" },
+    { day: "Samedi", time: "9h00 - Minuit" },
+    { day: "Dimanche", time: "9h00 - 17h00" },
   ];
 
   const galleryImages = [
@@ -362,8 +366,8 @@ export default function LandingPage() {
                       Nous Trouver
                     </h3>
                     <p className="text-lg text-foreground/80 leading-relaxed">
-                      123 Rue des Quilles<br />
-                      Ville, QC H1H 1H1
+                      133 Boulevard Maple<br />
+                      Châteauguay, QC
                     </p>
                     <p className="text-foreground/60 mt-2">
                       Stationnement gratuit disponible
@@ -483,7 +487,7 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <p className="text-sm text-foreground/60">Visitez-nous</p>
-                    <p className="text-xl font-bold text-secondary">123 Rue des Quilles, Ville</p>
+                    <p className="text-xl font-bold text-secondary">133 Boul. Maple, Châteauguay</p>
                   </div>
                 </div>
               </div>
