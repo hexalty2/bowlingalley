@@ -424,7 +424,7 @@ export default function LandingPage() {
               Galerie
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Découvrez l'ambiance de GoldenLane Bowl
+              Découvrez l'ambiance de Quillorama 2
             </p>
           </div>
 

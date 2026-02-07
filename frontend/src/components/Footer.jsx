@@ -12,14 +12,11 @@ export const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white text-2xl font-bold font-['Chivo']">G</span>
+                <span className="text-white text-2xl font-bold font-['Chivo']">Q</span>
               </div>
-              <div>
-                <h2 className="text-xl font-bold font-['Chivo'] tracking-tight">
-                  GoldenLane
-                </h2>
-                <p className="text-xs text-white/70 -mt-1">Petites Boules</p>
-              </div>
+              <h2 className="text-xl font-bold font-['Chivo'] tracking-tight">
+                Quillorama 2
+              </h2>
             </Link>
             <p className="text-white/80 text-base leading-relaxed">
               Le plaisir du bowling pour toute la famille. Petites boules, grandes joies depuis 1985.

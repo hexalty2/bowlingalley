@@ -61,14 +61,11 @@ export const Navbar = () => {
             data-testid="logo-link"
           >
             <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-105 transition-transform">
-              <span className="text-white text-2xl font-bold font-['Chivo']">G</span>
+              <span className="text-white text-2xl font-bold font-['Chivo']">Q</span>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-secondary font-['Chivo'] tracking-tight">
-                GoldenLane
-              </h1>
-              <p className="text-xs text-secondary/70 -mt-1">Petites Boules</p>
-            </div>
+            <h1 className="text-xl font-bold text-secondary font-['Chivo'] tracking-tight">
+              Quillorama 2
+            </h1>
           </Link>
 
           {/* Desktop Navigation */}
