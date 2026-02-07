@@ -32,12 +32,12 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+15551234567"
+              href="tel:+14506921412"
               className="flex items-center gap-2 hover:text-primary transition-colors"
               data-testid="phone-link"
             >
               <Phone className="w-4 h-4" />
-              <span className="hidden sm:inline">(555) 123-4567</span>
+              <span className="hidden sm:inline">(450) 692-1412</span>
             </a>
             <span className="hidden md:flex items-center gap-2">
               <MapPin className="w-4 h-4" />
