@@ -1,1 +1,8 @@
-{\n  "dependencies": {\n    "date-fns": "^3.0.0",\n    "react-day-picker": "^8.10.0"\n  }\n}
+{
+  "name": "your-package-name",
+  "version": "1.0.0",
+  "dependencies": {
+    "date-fns": "^3.0.0",
+    "react-day-picker": "^8.10.0"
+  }
+}
