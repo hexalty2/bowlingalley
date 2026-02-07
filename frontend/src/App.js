@@ -1,12 +1,18 @@
-import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
-import YourComponent from './YourComponent';
+import "@/App.css";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
+import LandingPage from "@/pages/LandingPage";
 
 function App() {
   return (
-    <Router>
-      <YourComponent />
-    </Router>
+    <div className="App">
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </HashRouter>
+      <Toaster position="top-center" richColors />
+    </div>
   );
 }
 
