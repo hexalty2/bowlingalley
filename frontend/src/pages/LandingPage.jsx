@@ -342,18 +342,18 @@ export default function LandingPage() {
                 Horaires & Emplacement
               </h2>
 
-              <div className="space-y-6 mb-10">
+              <div className="space-y-3 mb-10">
                 {hours.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between p-4 bg-white rounded-xl border-2 border-secondary/10"
+                    className={`flex items-center justify-between p-4 bg-white rounded-xl border-2 ${item.closed ? 'border-primary/30 bg-primary/5' : 'border-secondary/10'}`}
                     data-testid={`hours-row-${index}`}
                   >
                     <div className="flex items-center gap-4">
-                      <Clock className="w-6 h-6 text-accent" />
-                      <span className="text-lg font-semibold text-secondary">{item.day}</span>
+                      <Clock className={`w-6 h-6 ${item.closed ? 'text-primary/50' : 'text-accent'}`} />
+                      <span className={`text-lg font-semibold ${item.closed ? 'text-secondary/60' : 'text-secondary'}`}>{item.day}</span>
                     </div>
-                    <span className="text-lg text-foreground/80">{item.time}</span>
+                    <span className={`text-lg ${item.closed ? 'text-primary font-semibold' : 'text-foreground/80'}`}>{item.time}</span>
                   </div>
                 ))}
               </div>
