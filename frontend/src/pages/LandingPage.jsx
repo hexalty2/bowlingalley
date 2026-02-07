@@ -79,7 +79,7 @@ export default function LandingPage() {
     price: "5$",
     unit: "par personne",
     features: [
-      { icon: CircleDot, text: "1 jeton de jeu" },
+      { icon: Cookie, text: "1 chips" },
       { icon: Cookie, text: "1 bonbon" },
       { icon: Coffee, text: "1 breuvage" },
     ],
