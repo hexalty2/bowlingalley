@@ -97,28 +97,28 @@ export default function LandingPage() {
 
   const galleryImages = [
     {
-      src: "https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg",
-      alt: "Allées de bowling modernes",
+      src: "https://images.unsplash.com/photo-1680479610867-f4c6dcd5b38e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Boules de bowling colorées",
     },
     {
-      src: "https://images.unsplash.com/photo-1671427478429-3cfa4f905769",
-      alt: "Action de bowling",
+      src: "https://images.unsplash.com/photo-1680479610966-622607249a73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Petites boules de bowling",
     },
     {
-      src: "https://images.pexels.com/photos/5781274/pexels-photo-5781274.jpeg",
-      alt: "Famille qui joue au bowling",
+      src: "https://images.unsplash.com/photo-1743527957211-b9da11f2af67?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Boules numérotées",
     },
     {
-      src: "https://images.unsplash.com/photo-1680479610966-622607249a73",
-      alt: "Boule de bowling gros plan",
+      src: "https://images.unsplash.com/photo-1650313525162-b980491aa3ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Allée de bowling néon",
     },
     {
-      src: "https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg",
-      alt: "Amis qui célèbrent",
+      src: "https://images.unsplash.com/photo-560293671-7d3b1ca9823d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkdWNrcGluJTIwYm93bGluZyUyMGNhbmRsZXBpbiUyMHNtYWxsJTIwYmFsbHxlbnwwfHx8fDE3NzA0NTI2Nzd8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Boule verte",
     },
     {
-      src: "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
-      alt: "Souliers et équipement",
+      src: "https://images.unsplash.com/photo-1667543241882-962c812ff19e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxkdWNrcGluJTIwYm93bGluZyUyMGNhbmRsZXBpbiUyMHNtYWxsJTIwYmFsbHxlbnwwfHx8fDE3NzA0NTI2Nzd8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Boule bleue",
     },
   ];
 
@@ -336,7 +336,7 @@ export default function LandingPage() {
       {/* Hours Section */}
       <section id="horaires" className="py-20 lg:py-32 px-6" data-testid="hours-section">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-secondary font-['Chivo'] mb-8">
                 Horaires & Emplacement
@@ -386,17 +386,26 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg"
-                  alt="Clients heureux au bowling"
-                  className="w-full h-full object-cover"
-                />
+            <div className="space-y-6">
+              {/* Google Maps Embed */}
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.8!2d-73.75!3d45.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc914e6d5f07a93%3A0xac03c48d0b7e3d5e!2sQuillorama%202%20Chateauguay!5e0!3m2!1sfr!2sca!4v1700000000000!5m2!1sfr!2sca"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Maps - Quillorama 2 Châteauguay"
+                  className="w-full"
+                  data-testid="google-map"
+                ></iframe>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-2xl shadow-xl">
-                <p className="text-lg font-bold font-['Chivo']">Ouvert 7 jours</p>
-                <p className="text-white/80">Beau temps, mauvais temps!</p>
+              
+              <div className="bg-primary text-white p-6 rounded-2xl shadow-xl text-center">
+                <p className="text-lg font-bold font-['Chivo']">Ouvert selon l'horaire</p>
+                <p className="text-white/80">Premier arrivé, premier servi!</p>
               </div>
             </div>
           </div>
@@ -454,30 +463,16 @@ export default function LandingPage() {
 
               <div className="space-y-6">
                 <a
-                  href="tel:+15551234567"
-                  className="flex items-center gap-4 p-4 bg-white rounded-xl border-2 border-secondary/10 hover:border-primary transition-colors group"
+                  href="tel:+14506921412"
+                  className="flex items-center gap-4 p-6 bg-white rounded-xl border-2 border-primary hover:bg-primary/5 transition-colors group"
                   data-testid="contact-phone"
                 >
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Phone className="w-7 h-7 text-primary" />
+                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <Phone className="w-8 h-8 text-white" />
                   </div>
                   <div>
                     <p className="text-sm text-foreground/60">Appelez-nous</p>
-                    <p className="text-xl font-bold text-secondary">(555) 123-4567</p>
-                  </div>
-                </a>
-
-                <a
-                  href="mailto:bonjour@goldenlanebowl.com"
-                  className="flex items-center gap-4 p-4 bg-white rounded-xl border-2 border-secondary/10 hover:border-primary transition-colors group"
-                  data-testid="contact-email"
-                >
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Mail className="w-7 h-7 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-foreground/60">Écrivez-nous</p>
-                    <p className="text-xl font-bold text-secondary">bonjour@goldenlanebowl.com</p>
+                    <p className="text-2xl font-bold text-primary">(450) 692-1412</p>
                   </div>
                 </a>
 
@@ -524,6 +519,13 @@ export default function LandingPage() {
                     </div>
                   </div>
                 </div>
+                <a
+                  href="tel:+14506921412"
+                  className="mt-6 inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors"
+                >
+                  <Phone className="w-5 h-5" />
+                  (450) 692-1412
+                </a>
               </Card>
             </div>
           </div>
