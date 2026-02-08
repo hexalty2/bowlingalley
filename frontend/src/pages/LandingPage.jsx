@@ -1,16 +1,15 @@
-// LandingPage.jsx
-// Updated to remove the star badge and the text "Plaisir familial depuis 1985" from the hero section
-
 import React from 'react';
-import './LandingPage.css';
+import { motion } from 'framer-motion';
 
 const LandingPage = () => {
   return (
-    <div className="hero">
-      <h1>Welcome to the Bowling Alley</h1>
-      {/* Removed star badge and associated text */}
-      <p>Experience fun and excitement in every frame!</p>
-    </div>
+    <section>
+      <h1>Welcome to Our Bowling Alley!</h1>
+      <p>Experience fun and excitement for the whole family!</p>
+      <motion.div animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        {/* Other content of LandingPage */}
+      </motion.div>
+    </section>
   );
 };
 
