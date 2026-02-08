@@ -1,18 +1,17 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
-  return (
-    <footer>
-      /* Other footer content */
-
-      <div>
-        {/* Other content above line 27 */} 
-        Le plaisir du bowling pour toute la famille. Petites boules, grandes joies.
-      </div>
-
-      /* Other content excluding line 106 */
-    </footer>
-  );
+    return (
+        <footer className="footer">
+            <div className="footer-content">
+                <h1>Bowling Alley</h1>
+                <p>Your favorite place for family fun!</p>
+                {/* Removed the line "Plaisir familial depuis 1985" */}
+                <p>&copy; Your Company Name</p>
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;
