@@ -1,7 +1,17 @@
-// Removed the star badge displaying "Plaisir familial depuis 1985" from the hero section.
+// LandingPage.jsx
+// Updated to remove the star badge and the text "Plaisir familial depuis 1985" from the hero section
 
-// ... other code above remains unchanged
+import React from 'react';
+import './LandingPage.css';
 
-// Hero section omitted the badge here
+const LandingPage = () => {
+  return (
+    <div className="hero">
+      <h1>Welcome to the Bowling Alley</h1>
+      {/* Removed star badge and associated text */}
+      <p>Experience fun and excitement in every frame!</p>
+    </div>
+  );
+};
 
-// ... other code below remains unchanged
+export default LandingPage;
