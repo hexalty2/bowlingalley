@@ -65,6 +65,12 @@ export default function LandingPage() {
       description: "Salle disponible à louer pour vos événements spéciaux.",
       image: `${process.env.PUBLIC_URL}/images/bowling-4.jpg`,
     },
+    {
+      icon: Coffee,
+      title: "Snack & Bar",
+      description: "Profitez de notre sélection de collations et boissons pour accompagner votre partie.",
+      image: `${process.env.PUBLIC_URL}/images/bowling-5.jpg`,
+    },
   ];
 
   const pricing = [
