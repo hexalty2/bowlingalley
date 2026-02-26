@@ -18,6 +18,7 @@ import {
   Coffee,
   CircleDot,
   Home,
+  Accessibility,
 } from "lucide-react";
 
 export default function LandingPage() {
@@ -61,7 +62,7 @@ export default function LandingPage() {
       title: "Location Allée",
       price: "38$",
       unit: "par heure",
-      features: ["Maximum 6 joueurs", "Souliers non inclus", "Tableau de pointage inclus"],
+      features: ["Maximum 6 joueurs", "Souliers non-inclus", "Tableau de pointage inclus"],
       icon: Timer,
       highlight: true,
     },
@@ -139,10 +140,6 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-32">
           <div className="max-w-2xl animate-fade-in">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-              <Star className="w-5 h-5 text-primary" />
-              <span className="text-white font-medium">Plaisir familial depuis 1985</span>
-            </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white font-['Chivo'] leading-tight mb-6">
               Petites Boules,
@@ -159,7 +156,7 @@ export default function LandingPage() {
               <Banknote className="w-8 h-8" />
               <div>
                 <p className="text-xl font-bold font-['Chivo']">COMPTANT SEULEMENT</p>
-                <p className="text-white/80 text-sm">Pas de réservation nécessaire</p>
+                <p className="text-white/80 text-sm">Réservation nécessaire</p>
               </div>
             </div>
 
@@ -239,7 +236,7 @@ export default function LandingPage() {
               Nos Tarifs
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Prix simples et transparents. Pas de frais cachés.
+              Les taxes sont incluses dans les prix.
             </p>
             <div className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold mt-6">
               <Banknote className="w-5 h-5" />
@@ -384,6 +381,12 @@ export default function LandingPage() {
                   <p className="text-foreground/70 text-sm">Pas de carte de crédit ou débit acceptée</p>
                 </div>
               </div>
+
+              {/* Accessibility */}
+              <div className="flex items-center gap-4 p-4 bg-secondary/5 rounded-xl border-2 border-secondary/10 mt-4">
+                <Accessibility className="w-8 h-8 text-secondary flex-shrink-0" />
+                <p className="text-foreground/80 text-sm">Cet établissement est accessible aux personnes à mobilité réduite</p>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -497,7 +500,7 @@ export default function LandingPage() {
                   Comptant Seulement
                 </h3>
                 <p className="text-foreground/70 mb-6">
-                  Pas de réservation nécessaire! Présentez-vous et jouez. Premier arrivé, premier servi.
+                  Réservation nécessaire. Appelez-nous pour réserver votre allée.
                 </p>
                 <div className="bg-secondary/5 rounded-2xl p-6">
                   <div className="grid grid-cols-2 gap-4 text-left">

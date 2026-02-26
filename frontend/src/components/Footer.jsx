@@ -103,7 +103,6 @@ export const Footer = () => {
                 {/* Bottom bar */}
                 <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/60 text-sm">© {currentYear} GoldenLane Bowl. Tous droits réservés.</p>
-                    <p className="text-white/60 text-sm">Plaisir familial depuis 1985</p>
                 </div>
             </div>
         </footer>
