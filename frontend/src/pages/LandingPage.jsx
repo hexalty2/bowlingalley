@@ -16,7 +16,6 @@ import {
   Gift,
   Candy,
   Coffee,
-  CircleDot,
   Home,
   Accessibility,
 } from "lucide-react";
@@ -44,28 +43,28 @@ const ChipsBag = ({ className, ...props }) => (
 export default function LandingPage() {
   const services = [
     {
-      icon: CircleDot,
-      title: "Petites Boules",
-      description: "Bowling avec petites boules pour tous les âges. Parfait pour les familles!",
+      icon: PartyPopper,
+      title: "Fêtes d'enfants",
+      description: "Célébrez l'anniversaire de votre enfant dans une ambiance festive et amusante!",
       image: "https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg",
     },
     {
       icon: Users,
-      title: "Jusqu'à 6 Joueurs",
-      description: "Maximum 6 joueurs par allée pour une expérience conviviale.",
+      title: "Party de bureau",
+      description: "Renforcez l'esprit d'équipe avec une sortie de bureau mémorable.",
       image: "https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg",
+    },
+    {
+      icon: Target,
+      title: "Quillauthon/Levée de fonds",
+      description: "Organisez votre collecte de fonds dans un cadre ludique et convivial.",
+      image: "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
     },
     {
       icon: Home,
       title: "Salle Privée",
       description: "Salle disponible à louer pour vos événements spéciaux.",
       image: "https://images.unsplash.com/photo-1570472456794-8578e4bf1fab",
-    },
-    {
-      icon: Footprints,
-      title: "Location de Souliers",
-      description: "Souliers de bowling disponibles en toutes tailles, désinfectés après chaque usage.",
-      image: "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
     },
   ];
 
