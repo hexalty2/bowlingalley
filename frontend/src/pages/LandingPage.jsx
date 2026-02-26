@@ -21,6 +21,26 @@ import {
   Accessibility,
 } from "lucide-react";
 
+const ChipsBag = ({ className, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    {...props}
+  >
+    <path d="M9 2h6l2 4H7L9 2z" />
+    <rect x="6" y="6" width="12" height="12" rx="1" />
+    <path d="M7 18l2 4h6l2-4H7z" />
+  </svg>
+);
+
 export default function LandingPage() {
   const services = [
     {
@@ -80,7 +100,7 @@ export default function LandingPage() {
     price: "5$",
     unit: "par personne",
     features: [
-      { icon: Cookie, text: "1 chips" },
+      { icon: ChipsBag, text: "1 chips" },
       { icon: Cookie, text: "1 bonbon" },
       { icon: Coffee, text: "1 breuvage" },
     ],
