@@ -46,25 +46,25 @@ export default function LandingPage() {
       icon: PartyPopper,
       title: "Fêtes d'enfants",
       description: "Célébrez l'anniversaire de votre enfant dans une ambiance festive et amusante!",
-      image: "https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg",
+      image: "/images/service-fetes-enfants.svg",
     },
     {
       icon: Users,
       title: "Party de bureau",
       description: "Renforcez l'esprit d'équipe avec une sortie de bureau mémorable.",
-      image: "https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg",
+      image: "/images/service-party-bureau.svg",
     },
     {
       icon: Target,
       title: "Quillauthon/Levée de fonds",
       description: "Organisez votre collecte de fonds dans un cadre ludique et convivial.",
-      image: "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
+      image: "/images/service-quillathon.svg",
     },
     {
       icon: Home,
       title: "Salle Privée",
       description: "Salle disponible à louer pour vos événements spéciaux.",
-      image: "https://images.unsplash.com/photo-1570472456794-8578e4bf1fab",
+      image: "/images/service-salle-privee.svg",
     },
   ];
 
@@ -117,27 +117,27 @@ export default function LandingPage() {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1680479610867-f4c6dcd5b38e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/gallery-1.svg",
       alt: "Boules de bowling colorées",
     },
     {
-      src: "https://images.unsplash.com/photo-1680479610966-622607249a73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/gallery-2.svg",
       alt: "Petites boules de bowling",
     },
     {
-      src: "https://images.unsplash.com/photo-1743527957211-b9da11f2af67?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/gallery-3.svg",
       alt: "Boules numérotées",
     },
     {
-      src: "https://images.unsplash.com/photo-1650313525162-b980491aa3ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/gallery-4.svg",
       alt: "Allée de bowling néon",
     },
     {
-      src: "https://images.unsplash.com/photo-560293671-7d3b1ca9823d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkdWNrcGluJTIwYm93bGluZyUyMGNhbmRsZXBpbiUyMHNtYWxsJTIwYmFsbHxlbnwwfHx8fDE3NzA0NTI2Nzd8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/gallery-5.svg",
       alt: "Boule verte",
     },
     {
-      src: "https://images.unsplash.com/photo-1667543241882-962c812ff19e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxkdWNrcGluJTIwYm93bGluZyUyMGNhbmRsZXBpbiUyMHNtYWxsJTIwYmFsbHxlbnwwfHx8fDE3NzA0NTI2Nzd8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/gallery-6.svg",
       alt: "Boule bleue",
     },
   ];
