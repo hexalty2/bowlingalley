@@ -14,37 +14,57 @@ import {
   Timer,
   Banknote,
   Gift,
-  Cookie,
+  Candy,
   Coffee,
-  CircleDot,
   Home,
+  Accessibility,
 } from "lucide-react";
+
+const ChipsBag = ({ className, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    {...props}
+  >
+    <path d="M9 2h6l2 4H7L9 2z" />
+    <rect x="6" y="6" width="12" height="12" rx="1" />
+    <path d="M7 18l2 4h6l2-4H7z" />
+  </svg>
+);
 
 export default function LandingPage() {
   const services = [
     {
-      icon: CircleDot,
-      title: "Petites Boules",
-      description: "Bowling avec petites boules pour tous les âges. Parfait pour les familles!",
-      image: "https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg",
+      icon: PartyPopper,
+      title: "Fêtes d'enfants",
+      description: "Célébrez l'anniversaire de votre enfant dans une ambiance festive et amusante!",
+      image: "/images/bowling-1.jpg",
     },
     {
       icon: Users,
-      title: "Jusqu'à 6 Joueurs",
-      description: "Maximum 6 joueurs par allée pour une expérience conviviale.",
-      image: "https://images.pexels.com/photos/6928669/pexels-photo-6928669.jpeg",
+      title: "Party de bureau",
+      description: "Renforcez l'esprit d'équipe avec une sortie de bureau mémorable.",
+      image: "/images/bowling-2.jpg",
+    },
+    {
+      icon: Target,
+      title: "Quillauthon/Levée de fonds",
+      description: "Organisez votre collecte de fonds dans un cadre ludique et convivial.",
+      image: "/images/bowling-3.jpg",
     },
     {
       icon: Home,
       title: "Salle Privée",
       description: "Salle disponible à louer pour vos événements spéciaux.",
-      image: "https://images.unsplash.com/photo-1570472456794-8578e4bf1fab",
-    },
-    {
-      icon: Footprints,
-      title: "Location de Souliers",
-      description: "Souliers de bowling disponibles en toutes tailles, désinfectés après chaque usage.",
-      image: "https://images.pexels.com/photos/5952896/pexels-photo-5952896.jpeg",
+      image: "/images/bowling-4.jpg",
     },
   ];
 
@@ -61,7 +81,7 @@ export default function LandingPage() {
       title: "Location Allée",
       price: "38$",
       unit: "par heure",
-      features: ["Maximum 6 joueurs", "Souliers non inclus", "Tableau de pointage inclus"],
+      features: ["Maximum 6 joueurs", "Souliers non-inclus", "Tableau de pointage inclus"],
       icon: Timer,
       highlight: true,
     },
@@ -79,8 +99,8 @@ export default function LandingPage() {
     price: "5$",
     unit: "par personne",
     features: [
-      { icon: Cookie, text: "1 chips" },
-      { icon: Cookie, text: "1 bonbon" },
+      { icon: ChipsBag, text: "1 chips" },
+      { icon: Candy, text: "1 bonbon" },
       { icon: Coffee, text: "1 breuvage" },
     ],
   };
@@ -97,27 +117,27 @@ export default function LandingPage() {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1680479610867-f4c6dcd5b38e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/bowling-1.jpg",
       alt: "Boules de bowling colorées",
     },
     {
-      src: "https://images.unsplash.com/photo-1680479610966-622607249a73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/bowling-2.jpg",
       alt: "Petites boules de bowling",
     },
     {
-      src: "https://images.unsplash.com/photo-1743527957211-b9da11f2af67?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/bowling-3.jpg",
       alt: "Boules numérotées",
     },
     {
-      src: "https://images.unsplash.com/photo-1650313525162-b980491aa3ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxib3dsaW5nJTIwc21hbGwlMjBiYWxscyUyMGZhbWlseSUyMGZ1bnxlbnwwfHx8fDE3NzA0NTI2NTZ8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/bowling-4.jpg",
       alt: "Allée de bowling néon",
     },
     {
-      src: "https://images.unsplash.com/photo-560293671-7d3b1ca9823d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxkdWNrcGluJTIwYm93bGluZyUyMGNhbmRsZXBpbiUyMHNtYWxsJTIwYmFsbHxlbnwwfHx8fDE3NzA0NTI2Nzd8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/bowling-5.jpg",
       alt: "Boule verte",
     },
     {
-      src: "https://images.unsplash.com/photo-1667543241882-962c812ff19e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxkdWNrcGluJTIwYm93bGluZyUyMGNhbmRsZXBpbiUyMHNtYWxsJTIwYmFsbHxlbnwwfHx8fDE3NzA0NTI2Nzd8MA&ixlib=rb-4.1.0&q=85",
+      src: "/images/bowling-6.jpg",
       alt: "Boule bleue",
     },
   ];
@@ -131,7 +151,7 @@ export default function LandingPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg)`,
+            backgroundImage: `url(/images/bowling-7.jpg)`,
           }}
         >
           <div className="hero-overlay absolute inset-0" />
@@ -139,10 +159,6 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-32">
           <div className="max-w-2xl animate-fade-in">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-              <Star className="w-5 h-5 text-primary" />
-              <span className="text-white font-medium">Plaisir familial depuis 1985</span>
-            </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white font-['Chivo'] leading-tight mb-6">
               Petites Boules,
@@ -159,7 +175,7 @@ export default function LandingPage() {
               <Banknote className="w-8 h-8" />
               <div>
                 <p className="text-xl font-bold font-['Chivo']">COMPTANT SEULEMENT</p>
-                <p className="text-white/80 text-sm">Pas de réservation nécessaire</p>
+                <p className="text-white/80 text-sm">Réservation nécessaire</p>
               </div>
             </div>
 
@@ -239,7 +255,7 @@ export default function LandingPage() {
               Nos Tarifs
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Prix simples et transparents. Pas de frais cachés.
+              Les taxes sont incluses dans les prix.
             </p>
             <div className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-bold mt-6">
               <Banknote className="w-5 h-5" />
@@ -384,6 +400,12 @@ export default function LandingPage() {
                   <p className="text-foreground/70 text-sm">Pas de carte de crédit ou débit acceptée</p>
                 </div>
               </div>
+
+              {/* Accessibility */}
+              <div className="flex items-center gap-4 p-4 bg-secondary/5 rounded-xl border-2 border-secondary/10 mt-4">
+                <Accessibility className="w-8 h-8 text-secondary flex-shrink-0" />
+                <p className="text-foreground/80 text-sm">Cet établissement est accessible aux personnes à mobilité réduite</p>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -497,7 +519,7 @@ export default function LandingPage() {
                   Comptant Seulement
                 </h3>
                 <p className="text-foreground/70 mb-6">
-                  Pas de réservation nécessaire! Présentez-vous et jouez. Premier arrivé, premier servi.
+                  Réservation nécessaire. Appelez-nous pour réserver votre allée.
                 </p>
                 <div className="bg-secondary/5 rounded-2xl p-6">
                   <div className="grid grid-cols-2 gap-4 text-left">
