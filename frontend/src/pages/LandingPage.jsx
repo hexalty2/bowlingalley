@@ -46,25 +46,25 @@ export default function LandingPage() {
       icon: PartyPopper,
       title: "Fêtes d'enfants",
       description: "Célébrez l'anniversaire de votre enfant dans une ambiance festive et amusante!",
-      image: "/images/bowling-1.jpg",
+      image: `${process.env.PUBLIC_URL}/images/bowling-1.jpg`,
     },
     {
       icon: Users,
       title: "Party de bureau",
       description: "Renforcez l'esprit d'équipe avec une sortie de bureau mémorable.",
-      image: "/images/bowling-2.jpg",
+      image: `${process.env.PUBLIC_URL}/images/bowling-2.jpg`,
     },
     {
       icon: Target,
       title: "Quillauthon/Levée de fonds",
       description: "Organisez votre collecte de fonds dans un cadre ludique et convivial.",
-      image: "/images/bowling-3.jpg",
+      image: `${process.env.PUBLIC_URL}/images/bowling-3.jpg`,
     },
     {
       icon: Home,
       title: "Salle Privée",
       description: "Salle disponible à louer pour vos événements spéciaux.",
-      image: "/images/bowling-4.jpg",
+      image: `${process.env.PUBLIC_URL}/images/bowling-4.jpg`,
     },
   ];
 
@@ -117,27 +117,27 @@ export default function LandingPage() {
 
   const galleryImages = [
     {
-      src: "/images/bowling-1.jpg",
+      src: `${process.env.PUBLIC_URL}/images/bowling-1.jpg`,
       alt: "Boules de bowling colorées",
     },
     {
-      src: "/images/bowling-2.jpg",
+      src: `${process.env.PUBLIC_URL}/images/bowling-2.jpg`,
       alt: "Petites boules de bowling",
     },
     {
-      src: "/images/bowling-3.jpg",
+      src: `${process.env.PUBLIC_URL}/images/bowling-3.jpg`,
       alt: "Boules numérotées",
     },
     {
-      src: "/images/bowling-4.jpg",
+      src: `${process.env.PUBLIC_URL}/images/bowling-4.jpg`,
       alt: "Allée de bowling néon",
     },
     {
-      src: "/images/bowling-5.jpg",
+      src: `${process.env.PUBLIC_URL}/images/bowling-5.jpg`,
       alt: "Boule verte",
     },
     {
-      src: "/images/bowling-6.jpg",
+      src: `${process.env.PUBLIC_URL}/images/bowling-6.jpg`,
       alt: "Boule bleue",
     },
   ];
@@ -151,7 +151,7 @@ export default function LandingPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(/images/bowling-7.jpg)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/images/bowling-7.jpg)`,
           }}
         >
           <div className="hero-overlay absolute inset-0" />
