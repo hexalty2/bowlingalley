@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
-  <rect width="800" height="600" fill="#d5eaf5"/>
-  <rect x="50" y="50" width="700" height="500" fill="none" stroke="#2980b9" stroke-width="4" stroke-dasharray="16,8"/>
-  <text x="400" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1a5276">Party de bureau</text>
-  <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2980b9">Remplacer par votre photo</text>
-  <text x="400" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#5dade2">service-party-bureau.jpg / .png / .svg</text>
-</svg>

@@ -46,25 +46,25 @@ export default function LandingPage() {
       icon: PartyPopper,
       title: "Fêtes d'enfants",
       description: "Célébrez l'anniversaire de votre enfant dans une ambiance festive et amusante!",
-      image: "/images/service-fetes-enfants.svg",
+      image: "/images/bowling-1.jpg",
     },
     {
       icon: Users,
       title: "Party de bureau",
       description: "Renforcez l'esprit d'équipe avec une sortie de bureau mémorable.",
-      image: "/images/service-party-bureau.svg",
+      image: "/images/bowling-2.jpg",
     },
     {
       icon: Target,
       title: "Quillauthon/Levée de fonds",
       description: "Organisez votre collecte de fonds dans un cadre ludique et convivial.",
-      image: "/images/service-quillathon.svg",
+      image: "/images/bowling-3.jpg",
     },
     {
       icon: Home,
       title: "Salle Privée",
       description: "Salle disponible à louer pour vos événements spéciaux.",
-      image: "/images/service-salle-privee.svg",
+      image: "/images/bowling-4.jpg",
     },
   ];
 
@@ -117,27 +117,27 @@ export default function LandingPage() {
 
   const galleryImages = [
     {
-      src: "/images/gallery-1.svg",
+      src: "/images/bowling-1.jpg",
       alt: "Boules de bowling colorées",
     },
     {
-      src: "/images/gallery-2.svg",
+      src: "/images/bowling-2.jpg",
       alt: "Petites boules de bowling",
     },
     {
-      src: "/images/gallery-3.svg",
+      src: "/images/bowling-3.jpg",
       alt: "Boules numérotées",
     },
     {
-      src: "/images/gallery-4.svg",
+      src: "/images/bowling-4.jpg",
       alt: "Allée de bowling néon",
     },
     {
-      src: "/images/gallery-5.svg",
+      src: "/images/bowling-5.jpg",
       alt: "Boule verte",
     },
     {
-      src: "/images/gallery-6.svg",
+      src: "/images/bowling-6.jpg",
       alt: "Boule bleue",
     },
   ];
@@ -151,7 +151,7 @@ export default function LandingPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url(https://images.pexels.com/photos/7429729/pexels-photo-7429729.jpeg)`,
+            backgroundImage: `url(/images/bowling-7.jpg)`,
           }}
         >
           <div className="hero-overlay absolute inset-0" />

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
-  <rect width="800" height="800" fill="#f0f0f0"/>
-  <rect x="40" y="40" width="720" height="720" fill="none" stroke="#888" stroke-width="4" stroke-dasharray="16,8"/>
-  <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#444">Galerie — Photo 5</text>
-  <text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#666">Remplacer par votre photo</text>
-  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#999">gallery-5.jpg / .png / .svg</text>
-</svg>
