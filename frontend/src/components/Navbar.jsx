@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, MapPin, Phone, Banknote } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,11 +84,12 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Cash Only Badge */}
-          <div className="hidden lg:flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full font-bold">
-            <Banknote className="w-5 h-5" />
-            Comptant seulement
-          </div>
+          {/* Book Now Button (Desktop) */}
+          <Link to="/reserve" className="hidden lg:block" data-testid="book-now-btn">
+            <Button className="rounded-full px-6 py-3 text-base font-bold bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all active:scale-95">
+              Réserver
+            </Button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -115,10 +117,11 @@ export const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <div className="flex items-center gap-2 text-primary font-bold py-2">
-                <Banknote className="w-5 h-5" />
-                Comptant seulement
-              </div>
+              <Link to="/reserve" onClick={() => setIsOpen(false)} data-testid="mobile-book-now-btn">
+                <Button className="w-full rounded-full py-4 text-base font-bold bg-primary text-white hover:bg-primary/90 shadow-lg transition-all active:scale-95">
+                  Réserver
+                </Button>
+              </Link>
             </div>
           </div>
         )}

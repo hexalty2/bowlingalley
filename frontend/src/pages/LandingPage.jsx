@@ -1,4 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import {
@@ -176,6 +178,14 @@ export default function LandingPage() {
                 <Users className="w-5 h-5 text-primary" />
                 <span>Max 6 joueurs</span>
               </div>
+            </div>
+
+            <div className="mt-10">
+              <Link to="/reserve" data-testid="hero-book-now-btn">
+                <Button className="rounded-full px-10 py-6 text-xl font-bold bg-primary text-white hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all active:scale-95">
+                  Réserver Maintenant
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
