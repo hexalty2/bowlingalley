@@ -14,7 +14,7 @@ import {
   Timer,
   Banknote,
   Gift,
-  Cookie,
+  Candy,
   Coffee,
   CircleDot,
   Home,
@@ -101,7 +101,7 @@ export default function LandingPage() {
     unit: "par personne",
     features: [
       { icon: ChipsBag, text: "1 chips" },
-      { icon: Cookie, text: "1 bonbon" },
+      { icon: Candy, text: "1 bonbon" },
       { icon: Coffee, text: "1 breuvage" },
     ],
   };
