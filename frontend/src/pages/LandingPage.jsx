@@ -17,6 +17,8 @@ import {
   Coffee,
   Home,
   Accessibility,
+  UtensilsCrossed,
+  Wine,
 } from "lucide-react";
 
 const ChipsBag = ({ className, ...props }) => (
@@ -66,9 +68,15 @@ export default function LandingPage() {
       image: `${process.env.PUBLIC_URL}/images/bowling-4.jpg`,
     },
     {
-      icon: Coffee,
-      title: "Snack & Bar",
-      description: "Profitez de notre sélection de collations et boissons pour accompagner votre partie.",
+      icon: UtensilsCrossed,
+      title: "Snack",
+      description: "Profitez de notre sélection de collations et snacks délicieux pour accompagner votre partie.",
+      image: `${process.env.PUBLIC_URL}/images/bowling-5.jpg`,
+    },
+    {
+      icon: Wine,
+      title: "Bar",
+      description: "Découvrez nos boissons rafraîchissantes et alcoolisées pour compléter votre expérience.",
       image: `${process.env.PUBLIC_URL}/images/bowling-5.jpg`,
     },
   ];
@@ -393,7 +401,7 @@ export default function LandingPage() {
               {/* Google Maps Embed */}
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.8!2d-73.75!3d45.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc914e6d5f07a93%3A0xac03c48d0b7e3d5e!2sQuillorama%202%20Chateauguay!5e0!3m2!1sfr!2sca!4v1700000000000!5m2!1sfr!2sca"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.8!2d-73.75!3d45.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc914e6d5f07a93%3A0xac03c48d0b7e3d5e!2sQu[...]"
                   width="100%"
                   height="350"
                   style={{ border: 0 }}
