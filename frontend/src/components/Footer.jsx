@@ -91,10 +91,10 @@ export const Footer = () => {
                         </ul>
                         {/* Social Links */}
                         <div className="flex gap-4 mt-6">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook" data-testid="social-facebook">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                                 <Facebook className="w-5 h-5" />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram" data-testid="social-instagram">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                                 <Instagram className="w-5 h-5" />
                             </a>
                         </div>
@@ -102,7 +102,7 @@ export const Footer = () => {
                 </div>
                 {/* Bottom bar */}
                 <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-white/60 text-sm">© {currentYear} GoldenLane Bowl. Tous droits réservés.</p>
+                    <p className="text-white/60 text-sm">© {currentYear} Quillorama 2. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
