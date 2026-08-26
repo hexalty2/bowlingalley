@@ -65,7 +65,7 @@ export default function LandingPage() {
     {
       icon: Home,
       title: "Salle Privée",
-      description: "Salle disponible à louer pour vos événements spéciaux.",
+      description: "Salle disponible à louer pour vos événements spéciaux. Maximum 30 personnes.",
       image: `${process.env.PUBLIC_URL}/images/bowling-4.jpg`,
     },
     {
