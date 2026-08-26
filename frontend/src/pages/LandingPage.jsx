@@ -19,6 +19,7 @@ import {
   Accessibility,
   UtensilsCrossed,
   Wine,
+  GlassWater,
 } from "lucide-react";
 
 const ChipsBag = ({ className, ...props }) => (
@@ -114,7 +115,7 @@ export default function LandingPage() {
     features: [
       { icon: ChipsBag, text: "1 chips" },
       { icon: Candy, text: "1 bonbon" },
-      { icon: Coffee, text: "1 breuvage" },
+      { icon: GlassWater, text: "1 breuvage" },
     ],
   };
 
