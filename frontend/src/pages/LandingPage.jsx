@@ -85,7 +85,7 @@ export default function LandingPage() {
   const pricing = [
     {
       title: "Une Partie",
-      price: "6$",
+      price: "7$",
       unit: "par personne",
       duration: "15 minutes",
       features: ["Durée: 15 minutes", "Petites boules", "Tous niveaux bienvenus"],
@@ -93,7 +93,7 @@ export default function LandingPage() {
     },
     {
       title: "Location Allée",
-      price: "38$",
+      price: "40$",
       unit: "par heure",
       features: ["Maximum 6 joueurs", "Souliers non-inclus", "Tableau de pointage inclus"],
       icon: Timer,
@@ -110,7 +110,7 @@ export default function LandingPage() {
 
   const partyPackage = {
     title: "Forfait Fête",
-    price: "5$",
+    price: "6$",
     unit: "par personne",
     features: [
       { icon: ChipsBag, text: "1 chips" },
