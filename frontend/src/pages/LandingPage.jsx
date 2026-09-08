@@ -402,7 +402,7 @@ export default function LandingPage() {
               {/* Google Maps Embed */}
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.8!2d-73.75!3d45.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc914e6d5f07a93%3A0xac03c48d0b7e3d5e!2sQu[...]"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.8!2d-73.75!3d45.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc914e6d5f07a93%3A0xac03c48d0b7e3d5e!2sQu[...][...]
                   width="100%"
                   height="350"
                   style={{ border: 0 }}
