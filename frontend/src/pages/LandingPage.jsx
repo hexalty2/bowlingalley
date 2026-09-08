@@ -185,11 +185,11 @@ export default function LandingPage() {
             <div className="flex flex-wrap gap-6 text-white/90">
               <div className="flex items-center gap-2">
                 <Target className="w-5 h-5 text-primary" />
-                <span>6$ / partie</span>
+                <span>7$ / partie</span>
               </div>
               <div className="flex items-center gap-2">
                 <Timer className="w-5 h-5 text-primary" />
-                <span>38$ / heure</span>
+                <span>40$ / heure</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-primary" />
@@ -515,11 +515,11 @@ export default function LandingPage() {
                   <div className="grid grid-cols-2 gap-4 text-left">
                     <div>
                       <p className="text-foreground/60 text-sm">Une partie</p>
-                      <p className="text-xl font-bold text-primary">6$</p>
+                      <p className="text-xl font-bold text-primary">7$</p>
                     </div>
                     <div>
                       <p className="text-foreground/60 text-sm">Location allée</p>
-                      <p className="text-xl font-bold text-primary">38$/h</p>
+                      <p className="text-xl font-bold text-primary">40$/h</p>
                     </div>
                     <div>
                       <p className="text-foreground/60 text-sm">Souliers</p>
@@ -527,7 +527,7 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <p className="text-foreground/60 text-sm">Forfait fête</p>
-                      <p className="text-xl font-bold text-primary">5$/pers</p>
+                      <p className="text-xl font-bold text-primary">6$/pers</p>
                     </div>
                   </div>
                 </div>
