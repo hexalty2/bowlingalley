@@ -78,7 +78,7 @@ export default function LandingPage() {
       icon: Wine,
       title: "Bar",
       description: "Découvrez nos boissons rafraîchissantes et alcoolisées pour compléter votre expérience.",
-      image: `${process.env.PUBLIC_URL}/images/bowling-5.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/bar.jpg`,
     },
   ];
 
