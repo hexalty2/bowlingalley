@@ -56,9 +56,11 @@ export const Navbar = () => {
             className="flex items-center gap-3 group"
             data-testid="logo-link"
           >
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-105 transition-transform">
-              <span className="text-white text-2xl font-bold font-['Chivo']">Q</span>
-            </div>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/logo.jpg`}
+              alt="Quillorama 2 Logo"
+              className="h-12 w-auto group-hover:scale-105 transition-transform"
+            />
             <h1 className="text-xl font-bold text-secondary font-['Chivo'] tracking-tight">
               Quillorama 2
             </h1>
