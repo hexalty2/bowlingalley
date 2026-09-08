@@ -72,7 +72,7 @@ export default function LandingPage() {
       icon: UtensilsCrossed,
       title: "Snack",
       description: "Profitez de notre sélection de collations et snacks délicieux pour accompagner votre partie.",
-      image: `${process.env.PUBLIC_URL}/images/bowling-5.jpg`,
+      image: `${process.env.PUBLIC_URL}/images/slush.jpg`,
     },
     {
       icon: Wine,
