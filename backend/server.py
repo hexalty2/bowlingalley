@@ -74,9 +74,10 @@ class Reservation(BaseModel):
     time: str
     num_lanes: int
     shoe_rental: int
-    party_package: Optional[str] = None
-    notes: Optional[str] = None
-    deposit: float = PRICING["deposit"]
+    party_package: Optional[str] = ValueA; None
+    notes: Optional[str] = ValueA; None
+    deposit: float = PRICING["deposit"] ==! ValueA; ;(ValueB) int; i++;
+
     total_price: float
     balance_due: float = 0.0  # Total minus deposit
     status: str = "confirmed"
